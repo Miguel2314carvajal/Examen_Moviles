@@ -1,0 +1,106 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Curriculum Vitae
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row style="background-color: white; height: 250px;">
+      <ion-col  class="ion-text-center" style="display: flex; justify-content: center; align-items: center; ">
+        <img 
+        alt="Monica" 
+        src="/assets/images/Monica.jpg" 
+        style="width: 300px; height: 300px; border-radius: 50%; object-fit: cover; margin: auto; border: 20px solid black;" />
+        
+      </ion-col >
+      <ion-col size="8" style="display: flex; justify-content: center; align-items: center; height: 100%;"> 
+        <h1 style="color: black; font-size: 60px; font-weight: bold;">Mónica Yadira Jaña Guachi</h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row style=" height: 250px;">
+      <ion-col >
+        <h1 style=" font-weight: bold;"><ion-icon name="chevron-forward-outline"></ion-icon>Contacto</h1>
+        <ion-list>
+          <ion-item>
+            <ion-label><ion-icon style="height:30px ; width: 30px; padding-right: 20px;" name="call-outline"></ion-icon>0986554447</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label><ion-icon style="height:30px ; width: 30px; padding-right: 20px;"name="mail-outline"></ion-icon>monica.jana<ion-icon name="at-outline"></ion-icon>epn.edu.ec</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col size="6"> 
+        <h1 style=" font-weight: bold;"><ion-icon name="chevron-forward-outline"></ion-icon>Perfil</h1>
+        <div style=" width: 400px; align-items: center">
+          <p style="text-align: justify;">Soy una estudiante apasionada por la tecnología
+            con un firme compromiso de crecimiento y
+            aprendizaje continuo en el campo del desarrollo
+            de software. Soy una persona creativa, proactiva y
+            orientada a resultados.</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <h1 style=" font-weight: bold;"><ion-icon name="chevron-forward-outline"></ion-icon>Habilidades</h1>
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>Aplicación de la metodología ágil SCRUM en el desarrollo de software.</ion-label>
+        </ion-item>
+        
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>Manejo de software de control de versiones (Git).</ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>Desarrollo de aplicaciones web con HTML, CSS, JavaScript, Bootstrap y React.</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>Análisis, diseño e implementación de bases de datos SQL.</ion-label>
+        </ion-item>
+  
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </ion-thumbnail>
+          <ion-label>Conocimiento en el lenguaje de programación Java y Go</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <h1 style=" font-weight: bold;"><ion-icon name="chevron-forward-outline"></ion-icon>Sitios Web</h1>
+  <ion-row style="justify-content: center; text-align: center;">
+    <ion-col size="auto">
+      <ion-button  href="https://github.com/MonicaJana?tab=repositories" target="_blank">
+        GitHub
+        <ion-icon slot="end" name="logo-github"></ion-icon>
+      </ion-button>
+    </ion-col>
+  
+    <ion-col size="auto">
+      <ion-button  href="https://playful-churros-b829b6.netlify.app/" target="_blank">
+        Portafolio
+        <ion-icon slot="end" name="briefcase-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

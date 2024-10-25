@@ -1,0 +1,153 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="center-title">
+      Descripcion Grafica del autor
+    </ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+<ion-searchbar search-icon="search-circle" placeholder="Puede Buscar lo que guste :"></ion-searchbar>
+
+  <ion-card>
+    <ion-item>
+      <ion-label>
+        <ion-card-title>Miguel Carvajal</ion-card-title>
+        <ion-card-subtitle>Biobliografia</ion-card-subtitle>
+        <ion-card-content> El señor Miguel Carvajal fue un reconocido programador que llego a la cima en el 2024
+        </ion-card-content>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-list>
+    <ion-item>
+      <ion-label> Logros </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="airplane"></ion-icon>
+      <ion-label> Consiguo Hackear las redes de la Nasa en el 2022</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="aperture"></ion-icon>
+      <ion-label> Desarrollo un sistema de seguridad para Apple</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="analytics"></ion-icon>
+      <ion-label> Gano el trofeo internacional en inteligencia artificial</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button (click)="abrirPopup('document')">
+        <ion-icon name="document"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="abrirPopup('color-palette')">
+        <ion-icon name="color-palette"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="abrirPopup('globe')">
+        <ion-icon name="globe"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  
+  <ion-alert
+    [isOpen]="isAlertOpen"
+    [header]="alertHeader"
+    [subHeader]="alertSubHeader"
+    [message]="alertMessage"
+    [buttons]="['OK']"
+    (didDismiss)="setOpen(false)"
+  ></ion-alert>
+
+    <ion-list>
+      <!-- The reorder gesture is disabled by default, enable it to drag and drop items -->
+      <!-- Casting $event to $any is a temporary fix for this bug https://github.com/ionic-team/ionic-framework/issues/24245 -->
+      <ion-reorder-group [disabled]="false" (ionItemReorder)="handleReorder($any($event))">
+        <ion-item>
+          <ion-label>---------------- Lenguajes que domino -----------</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label> C++ </ion-label>
+          <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label> Python</ion-label>
+          <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label> Ionic </ion-label>
+          <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label> Ruby </ion-label>
+          <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label> Java </ion-label>
+          <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+      </ion-reorder-group>
+    </ion-list>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Especialización</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Desarrollador de Software</ion-card-title>
+            <ion-card-subtitle>Universidad Politécnica Nacional</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+           Se especializo en el desarrollo de software en la Universidad Politécnica Nacional de Ecuador donde realizo varios proyectos
+          </ion-card-content>
+        </ion-card>
+  
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Redes de computadoras</ion-card-title>
+            <ion-card-subtitle>Universidad Politécnica Nacional</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            Realizo una Especialización en redes de computadoras en la Universidad Politécnica Nacional donde desarrollo varios sistemas 
+          </ion-card-content>
+        </ion-card>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-toolbar>
+      <ion-buttons slot="secondary">
+        <ion-button fill="solid">
+          <ion-icon slot="start" name="person-circle"></ion-icon>
+          Contact
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="primary">
+        <ion-button fill="solid">
+          Help
+          <ion-icon slot="end" name="help-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Mas informacion</ion-title>
+    </ion-toolbar>
+
+    
+
+    
+
+  
+
+</ion-content>

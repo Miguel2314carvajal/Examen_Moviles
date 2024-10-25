@@ -1,0 +1,32 @@
+.content-container {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+  }
+  
+  .profile-image {
+    margin-right: 16px; /* Espacio entre la imagen y el texto */
+    width: 200px; /* Ancho de la imagen */
+    height: auto; /* Mantiene la relación de aspecto */
+  }
+  
+  .text-content {
+    flex: 1; /* Permite que el texto ocupe el espacio restante */
+  }
+.profile-title {
+    margin-bottom: 15px; /* Permite que el texto ocupe el espacio restante */
+  }
+
+  ion-label h2 {
+    font-weight: bold;
+  }
+  
+  ion-label h3 {
+    font-style: italic;
+    color: gray; /* Ajusta el color según tu preferencia */
+  }
+  
+  ion-label p {
+    margin: 0.2rem 0; /* Espaciado entre párrafos */
+  }
+  
+  

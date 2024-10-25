@@ -1,0 +1,177 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Curriculum Vitae</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-searchbar></ion-searchbar>
+
+  <ion-card id="perfil" >
+    <ion-item>
+      <ion-thumbnail slot="start" class="custom-thumbnail">
+        <img src="assets/images/imgMigue.jpg" alt="Foto de Miguel Carvajal">
+      </ion-thumbnail>
+      
+      <ion-label>
+        <ion-card-title>Miguel Carvajal</ion-card-title>
+        <ion-card-subtitle>Desarrollador de Software</ion-card-subtitle>
+        <ion-card-content>Soy estudiante de Tecnología en Desarrollo de Software en la Escuela Politécnica Nacional. Me apasiona crear soluciones tecnológicas innovadoras.
+        </ion-card-content>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-list>
+    <ion-item>
+      <ion-icon aria-hidden="true" name="call" slot="start"></ion-icon>
+      <ion-label>Celular</ion-label>
+      <ion-note slot="end">(593) 0983566739</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon aria-hidden="true" name="mail" slot="start"></ion-icon>
+      <ion-label>Correo</ion-label>
+      <ion-note slot="end">miguel.carvajal</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon aria-hidden="true" name="location" slot="start"></ion-icon>
+      <ion-label>Ubicación</ion-label>
+      <ion-note slot="end">San José de Moran, Quito</ion-note>
+    </ion-item>
+  </ion-list>
+
+  <ion-card id="habilidades">
+    <ion-card-header>
+      <ion-card-title>Habilidades</ion-card-title>
+    </ion-card-header>
+    <ion-list>
+      <!-- The reorder gesture is disabled by default, enable it to drag and drop items -->
+      <!-- Casting $event to $any is a temporary fix for this bug https://github.com/ionic-team/ionic-framework/issues/24245 -->
+      <ion-reorder-group [disabled]="false" (ionItemReorder)="handleReorder($any($event))">
+        <ion-item>
+          <ion-label> Trabajo en equipo </ion-label>
+          <ion-reorder slot="end">
+            <ion-icon name="pizza"></ion-icon>
+          </ion-reorder>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label> Resolución de problemas </ion-label>
+          <ion-reorder slot="end">
+            <ion-icon name="pizza"></ion-icon>
+          </ion-reorder>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label> Constante aprendizaje </ion-label>
+          <ion-reorder slot="end">
+            <ion-icon name="pizza"></ion-icon>
+          </ion-reorder>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label> Organizado </ion-label>
+          <ion-reorder slot="end">
+            <ion-icon name="pizza"></ion-icon>
+          </ion-reorder>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label> Responsable </ion-label>
+          <ion-reorder slot="end">
+            <ion-icon name="pizza"></ion-icon>
+          </ion-reorder>
+        </ion-item>
+      </ion-reorder-group>
+    </ion-list>
+  </ion-card>
+
+    <ion-card id="experiencia">
+      <ion-card-header>
+        <ion-card-title>Experiencia</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Trabajador Polifuncional</ion-card-title>
+            <ion-card-subtitle>Paseo San Francisco Cumbaya</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            2021 - Realización de decoraciones y arreglos en eventos.
+          </ion-card-content>
+        </ion-card>
+      </ion-card-content>
+    </ion-card>
+
+  <ion-card id="educacion" >
+    <ion-card-header>
+      <ion-card-title>Educación</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Tecnología Superior en Desarrollo de Software</ion-card-title>
+          <ion-card-subtitle>Universidad Politécnica Nacional</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          2022 - Actualidad
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Bachiller en Ciencias</ion-card-title>
+          <ion-card-subtitle>Unidad Educativa Fiscal Calderón 2</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          2015 - 2021
+        </ion-card-content>
+      </ion-card>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card id="referencias">
+    <ion-card-header>
+      <ion-card-title>Referencias</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Ana Carvajal</ion-label>
+          <ion-note slot="end">(593) 0987536319</ion-note>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+  <ion-fab-button>
+    <ion-icon name="chevron-up-circle"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button (click)="abrirPopup('document')">
+      <ion-icon name="document"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button (click)="abrirPopup('color-palette')">
+      <ion-icon name="color-palette"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button (click)="abrirPopup('globe')">
+      <ion-icon name="globe"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
+
+<ion-alert
+  [isOpen]="isAlertOpen"
+  [header]="alertHeader"
+  [subHeader]="alertSubHeader"
+  [message]="alertMessage"
+  [buttons]="['OK']"
+  (didDismiss)="setOpen(false)"
+></ion-alert>
+
+<ion-button (click)="irAGithub()">Ir a GitHub</ion-button>
+
