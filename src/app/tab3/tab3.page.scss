@@ -1,0 +1,19 @@
+ion-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  ion-grid {
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .calcular-btn {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+  }
+  

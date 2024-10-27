@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Raíces Cuadráticas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-item>
+          <ion-label position="stacked">Valor de a</ion-label>
+          <ion-input [(ngModel)]="a" type="number" placeholder="Ingrese el valor de a"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-item>
+          <ion-label position="stacked">Valor de b</ion-label>
+          <ion-input [(ngModel)]="b" type="number" placeholder="Ingrese el valor de b"></ion-input>
+        </ion-item>
+      </ion-col>
+      
+      <ion-col size="6">
+        <ion-item>
+          <ion-label position="stacked">Valor de c</ion-label>
+          <ion-input [(ngModel)]="c" type="number" placeholder="Ingrese el valor de c"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  
+  <div class="ion-text-center">
+    <ion-button expand="full" (click)="calcularRaices()">Calcular Raíces</ion-button>
+  </div>
+
+  
+  <div class="ion-text-center" *ngIf="raiz1 !== null && raiz2 !== null">
+    <ion-item lines="none">
+      <ion-label>Raíz 1:</ion-label>
+      <ion-text>{{ raiz1 }}</ion-text>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Raíz 2:</ion-label>
+      <ion-text>{{ raiz2 }}</ion-text>
+    </ion-item>
+  </div>
+
+  
+  <div class="ion-text-center" *ngIf="mensaje">
+    <ion-text color="danger">{{ mensaje }}</ion-text>
+  </div>
+
+</ion-content>
+

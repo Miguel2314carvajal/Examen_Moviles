@@ -1,17 +1,214 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Descripción biográfica del autor
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <!-- 1. Searchbar para buscar intereses -->
+    <ion-searchbar placeholder="Buscar intereses"></ion-searchbar>
+
+    <!-- 2. Card con Avatar y Descripción -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Miguel Angel Carvajal Sellan</ion-card-title>
+        <ion-card-subtitle>Tecnologia Superior en Desarrollo de Software</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-avatar slot="start">
+          <img src="assets/usuario.png" />
+        </ion-avatar>
+        Miguel Carvajal, nacido el 8 de agosto de 2003 en Quito-Ecuador, es un joven con una pasión innata por el aprendizaje y la exploración del mundo de la tecnología.
+        Durante su adolescencia, asistió a la Escuela Politecnica Nacional, donde se graduo y se destacó por su dedicación académica y su curiosidad por las ciencias de la computación. 
+      </ion-card-content>
+    </ion-card>
+
+      <!-- 3. Lista con Ítems de Logros -->
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Logros</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-icon name="book" slot="start"></ion-icon>
+        <ion-label>Desarrollo una aplicación de comercio electrónico completa usando Node.js y React, 
+          la cual procesó más de 50,000 transacciones en su primer año y obtuvo un puntaje de satisfacción de usuario de 4.8/5</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="code" slot="start"></ion-icon>
+        <ion-label>Implemento un sistema de CI/CD que redujo los tiempos de despliegue de semanas a horas, 
+          mejorando la eficiencia y eliminando errores en el proceso de producción.</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="analytics" slot="start"></ion-icon>
+        <ion-label>Introdujo tecnologías como Docker y Kubernetes en el flujo de trabajo del equipo, lo que permitió la escalabilidad y 
+          facilitó la colaboración en entornos de desarrollo complejos.</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <!-- 4. Lista con Ítems sobre lenguajes y con ordenamiento -->
+    <ion-card>
+    <ion-list>
+      <!-- The reorder gesture is disabled by default, enable it to drag and drop items -->
+      <!-- Casting $event to $any is a temporary fix for this bug https://github.com/ionic-team/ionic-framework/issues/24245 -->
+      <ion-reorder-group [disabled]="false" (ionItemReorder)="handleReorder($any($event))">
+        <ion-item>
+          <ion-label> -----Especializaciones en lenguajes----- </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="logo-javascript" slot="start"></ion-icon>
+          <ion-label> JavaScript y Frameworks de Frontend </ion-label>
+          <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+    
+        <ion-item>
+          <ion-icon name="logo-python" slot="start"></ion-icon>
+          <ion-label> Python y Machine Learning </ion-label>
+          <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+        
+        <ion-item>
+          <ion-icon name="logo-nodejs" slot="start"></ion-icon>
+          <ion-label> Node.js y Desarrollo Backend </ion-label>
+          <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+    
+        <ion-item>
+          <ion-icon name="cube-outline" slot="start"></ion-icon>
+          <ion-label> C# y Desarrollo en .NET </ion-label>
+          <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+    
+        <ion-item>
+          <ion-icon name="logo-ionic" slot="start"></ion-icon>
+          <ion-label> Ionic y Swift </ion-label>
+          <ion-reorder slot="end"></ion-reorder>
+        </ion-item>
+      </ion-reorder-group>
+    </ion-list>
+  </ion-card>
+
+  <!-- 5. Progress Bar para mostrar experiencia que el 0.8 representaria el 80%  -->
+    <ion-item>
+      <ion-label>Experiencia en Ionic</ion-label>
+      <ion-progress-bar value="0.8"></ion-progress-bar>
+    </ion-item>
+
+  <!-- 6. Range para indicar el nivel de satisfacción con Ionic -->
+    <ion-item>
+      <ion-label>Nivel de satisfacción</ion-label>
+      <ion-range min="0" max="100" pin="true" value="85"></ion-range>
+    </ion-item>
+
+    <!-- 7. Select para elegir la tecnología favorita -->
+    <ion-item>
+      <ion-label>Tecnología favorita</ion-label>
+      <ion-select placeholder="Seleccionar">
+        <ion-select-option value="ionic">Ionic</ion-select-option>
+        <ion-select-option value="angular">Angular</ion-select-option>
+        <ion-select-option value="react">React</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- 8. Accordion con más información -->
+    <ion-accordion-group>
+      <ion-accordion value="personal">
+        <ion-item slot="header" color="light">
+          <ion-label>Más sobre el autor</ion-label>
+        </ion-item>
+        <ion-list slot="content">
+          <ion-item>
+            <ion-label>Nacionalidad</ion-label>
+            <ion-note slot="end">Ecuatoriana</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label>Idioma</ion-label>
+            <ion-note slot="end">Español, Inglés</ion-note>
+          </ion-item>
+        </ion-list>
+      </ion-accordion>
+    </ion-accordion-group>
+
+    <!-- 9. Segment para seleccionar más detalles -->
+    <ion-segment value="info">
+      <ion-segment-button value="info">
+        <ion-label>Información</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="contact">
+        <ion-label>Contacto</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+      <!-- 10. Toggle para mostrar disponibilidad -->
+    <ion-item>
+      <ion-label>Disponible para proyectos</ion-label>
+      <ion-toggle checked></ion-toggle>
+    </ion-item>
+
+      <!-- 11. Chip con categorías o intereses -->
+    <ion-chip color="secondary">
+      <ion-icon name="musical-notes" color="dark"></ion-icon>
+      <ion-label>Música</ion-label>
+    </ion-chip>
+    <ion-chip color="primary">
+      <ion-icon name="globe" color="dark"></ion-icon>
+      <ion-label>Viajes</ion-label>
+    </ion-chip>
+    <ion-chip color="tertiary">
+      <ion-icon name="game-controller" color="dark"></ion-icon>
+      <ion-label>Videojuegos</ion-label>
+    </ion-chip>
+
+      <!-- 12. Botones de redes sociales -->
+    <ion-item>
+      <ion-button color="primary" href="https://twitter.com/" target="_blank">
+        <ion-icon name="logo-twitter" slot="start"></ion-icon>Twitter
+      </ion-button>
+      <ion-button color="danger" href="https://www.youtube.com/" target="_blank">
+        <ion-icon name="logo-youtube" slot="start"></ion-icon>Youtube
+      </ion-button>
+    </ion-item>
+
+      <!-- 13. Badge que muestra los años de experiencia -->
+    <ion-item>
+      <ion-label>Años de experiencia</ion-label>
+      <ion-badge color="success">5+</ion-badge>
+    </ion-item>
+
+    <!-- 14. Spinner para indicar carga -->
+    <ion-item>
+      <ion-spinner name="dots"></ion-spinner>
+      <ion-label>Cargando información...</ion-label>
+    </ion-item>
+
+    <!-- 15. Botones para desplegar -->
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+      <ion-fab-button>
+        <ion-icon name="chevron-up-circle"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button (click)="abrirPopup('document')">
+          <ion-icon name="document"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button (click)="abrirPopup('color-palette')">
+          <ion-icon name="color-palette"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button (click)="abrirPopup('globe')">
+          <ion-icon name="globe"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+    
+    <ion-alert
+      [isOpen]="isAlertOpen"
+      [header]="alertHeader"
+      [subHeader]="alertSubHeader"
+      [message]="alertMessage"
+      [buttons]="['OK']"
+      (didDismiss)="setOpen(false)"
+    ></ion-alert>
+
+
 </ion-content>

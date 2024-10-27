@@ -1,0 +1,21 @@
+ion-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  ion-item {
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .ion-text-center {
+    margin-top: 20px;
+  }
+
+  ion-grid {
+    width: 100%;
+    max-width: 800px;
+  }

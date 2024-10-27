@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Guardat Texto
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Escribe un nuevo texto</ion-label>
+    <ion-textarea [(ngModel)]="newText"></ion-textarea>
+  </ion-item>
+  <ion-button expand="full" (click)="addTextToStorage()">Guardar texto</ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let text of textService.texts">
+      <ion-label>{{ text.content }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
