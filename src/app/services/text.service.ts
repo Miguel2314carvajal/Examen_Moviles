@@ -20,7 +20,7 @@ export class TextService {
     const savedFile = await Filesystem.writeFile({
       path: fileName,
       data: content,
-      directory: Directory.Data, // Usar Directory.Data para almacenar el archivo de texto
+      directory: Directory.Documents, // Usar Directory.Data para almacenar el archivo de texto
       encoding: Encoding.UTF8
     });
 

@@ -8,10 +8,10 @@
 
 <ion-content [fullscreen]="true">
 
-    <!-- 1. Searchbar para buscar intereses -->
+    
     <ion-searchbar placeholder="Buscar intereses"></ion-searchbar>
 
-    <!-- 2. Card con Avatar y Descripción -->
+    
     <ion-card>
       <ion-card-header>
         <ion-card-title>Miguel Angel Carvajal Sellan</ion-card-title>
@@ -26,7 +26,7 @@
       </ion-card-content>
     </ion-card>
 
-      <!-- 3. Lista con Ítems de Logros -->
+      
     <ion-list>
       <ion-list-header>
         <ion-label>Logros</ion-label>
@@ -48,7 +48,7 @@
       </ion-item>
     </ion-list>
 
-    <!-- 4. Lista con Ítems sobre lenguajes y con ordenamiento -->
+    
     <ion-card>
     <ion-list>
       <!-- The reorder gesture is disabled by default, enable it to drag and drop items -->
@@ -90,19 +90,19 @@
     </ion-list>
   </ion-card>
 
-  <!-- 5. Progress Bar para mostrar experiencia que el 0.8 representaria el 80%  -->
+  
     <ion-item>
       <ion-label>Experiencia en Ionic</ion-label>
       <ion-progress-bar value="0.8"></ion-progress-bar>
     </ion-item>
 
-  <!-- 6. Range para indicar el nivel de satisfacción con Ionic -->
+  
     <ion-item>
       <ion-label>Nivel de satisfacción</ion-label>
       <ion-range min="0" max="100" pin="true" value="85"></ion-range>
     </ion-item>
 
-    <!-- 7. Select para elegir la tecnología favorita -->
+    
     <ion-item>
       <ion-label>Tecnología favorita</ion-label>
       <ion-select placeholder="Seleccionar">
@@ -112,7 +112,7 @@
       </ion-select>
     </ion-item>
 
-    <!-- 8. Accordion con más información -->
+    
     <ion-accordion-group>
       <ion-accordion value="personal">
         <ion-item slot="header" color="light">
@@ -131,7 +131,7 @@
       </ion-accordion>
     </ion-accordion-group>
 
-    <!-- 9. Segment para seleccionar más detalles -->
+    
     <ion-segment value="info">
       <ion-segment-button value="info">
         <ion-label>Información</ion-label>
@@ -141,13 +141,13 @@
       </ion-segment-button>
     </ion-segment>
 
-      <!-- 10. Toggle para mostrar disponibilidad -->
+      
     <ion-item>
       <ion-label>Disponible para proyectos</ion-label>
       <ion-toggle checked></ion-toggle>
     </ion-item>
 
-      <!-- 11. Chip con categorías o intereses -->
+      
     <ion-chip color="secondary">
       <ion-icon name="musical-notes" color="dark"></ion-icon>
       <ion-label>Música</ion-label>
@@ -161,7 +161,7 @@
       <ion-label>Videojuegos</ion-label>
     </ion-chip>
 
-      <!-- 12. Botones de redes sociales -->
+      
     <ion-item>
       <ion-button color="primary" href="https://twitter.com/" target="_blank">
         <ion-icon name="logo-twitter" slot="start"></ion-icon>Twitter
@@ -171,19 +171,19 @@
       </ion-button>
     </ion-item>
 
-      <!-- 13. Badge que muestra los años de experiencia -->
+      
     <ion-item>
       <ion-label>Años de experiencia</ion-label>
       <ion-badge color="success">5+</ion-badge>
     </ion-item>
 
-    <!-- 14. Spinner para indicar carga -->
+    
     <ion-item>
       <ion-spinner name="dots"></ion-spinner>
       <ion-label>Cargando información...</ion-label>
     </ion-item>
 
-    <!-- 15. Botones para desplegar -->
+    
     <ion-fab slot="fixed" vertical="bottom" horizontal="end">
       <ion-fab-button>
         <ion-icon name="chevron-up-circle"></ion-icon>
